@@ -22,16 +22,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Jiut&#39;s Home">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="两者共同特点：可以在鼠标移入、移出时添加效果。 但是在作用的方式和范围上有所区别。 CSS.father:hover ~ .activate&amp;#123;display:inline-block;&amp;#125; .father:hover ~ .off&amp;#123;display:none;&amp;#125; 作用方式：改变CSS属性。 作用范围：使用CSS选择器来决定对象。 优点： 简洁，易使用，不需要JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS的hover伪类与JS的onmouseover事件对比">
+<meta property="og:url" content="http://example.com/2020/11/21/CSS%E7%9A%84hover%E4%BC%AA%E7%B1%BB%E4%B8%8EJS%E7%9A%84onmouseover%E5%AF%B9%E6%AF%94/index.html">
 <meta property="og:site_name" content="Jiut&#39;s Home">
+<meta property="og:description" content="两者共同特点：可以在鼠标移入、移出时添加效果。 但是在作用的方式和范围上有所区别。 CSS.father:hover ~ .activate&amp;#123;display:inline-block;&amp;#125; .father:hover ~ .off&amp;#123;display:none;&amp;#125; 作用方式：改变CSS属性。 作用范围：使用CSS选择器来决定对象。 优点： 简洁，易使用，不需要JS">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-21T09:26:16.000Z">
+<meta property="article:modified_time" content="2020-11-21T10:21:43.266Z">
 <meta property="article:author" content="Jiut">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/archives/">
+<link rel="canonical" href="http://example.com/2020/11/21/CSS%E7%9A%84hover%E4%BC%AA%E7%B1%BB%E4%B8%8EJS%E7%9A%84onmouseover%E5%AF%B9%E6%AF%94/">
 
 
 <script class="page-configurations">
@@ -39,12 +43,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | Jiut's Home</title>
+  <title>CSS的hover伪类与JS的onmouseover事件对比 | Jiut's Home</title>
   
 
 
@@ -132,7 +136,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -144,6 +148,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS"><span class="nav-number">1.</span> <span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JS"><span class="nav-number">2.</span> <span class="nav-text">JS</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -184,153 +189,107 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
       
 
       
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 6 篇日志。 继续努力。</span>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/21/CSS%E7%9A%84hover%E4%BC%AA%E7%B1%BB%E4%B8%8EJS%E7%9A%84onmouseover%E5%AF%B9%E6%AF%94/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jiut">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jiut's Home">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CSS的hover伪类与JS的onmouseover事件对比
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+
+      <time title="创建时间：2020-11-21 17:26:16 / 修改时间：18:21:43" itemprop="dateCreated datePublished" datetime="2020-11-21T17:26:16+08:00">2020-11-21</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>两者共同特点：可以在鼠标移入、移出时添加效果。</p>
+<p>但是在作用的方式和范围上有所区别。</p>
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><pre><code>.father:hover ~ .activate&#123;display:inline-block;&#125;
+.father:hover ~ .off&#123;display:none;&#125;</code></pre>
+<p>作用方式：改变CSS属性。</p>
+<p>作用范围：使用CSS选择器来决定对象。</p>
+<p><strong>优点：</strong></p>
+<p>简洁，易使用，不需要JS，在绝大多数网站上可以使用。</p>
+<p><strong>缺点：</strong></p>
+<p>CSS选择器在实现复杂的定位时有些困难，如控制另一父容器中的内容。</p>
+<p>仅能改变样式，不能改变内容（虽然可以通过改变不同内容的属性来实现切换，但是不能实现增删等复杂操作）。</p>
+<p>仅有笼统的hover不支持更为细分的事件。</p>
+<h2 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h2><pre><code>functionover(obj)&#123;
+obj.innerHTML = &quot;鼠标移入&quot;;
+obj.style.display = &quot;inline-block&quot;;
+&#125;
+functionout(obj)&#123;
+obj.innerHTML = &quot;移出了&quot;;
+obj.style.display = &quot;none&quot;;
+&#125;</code></pre>
+<p>作用方式：JS的DOM方法。</p>
+<p>作用范围：无限制（JS）。</p>
+<p><strong>优点：</strong>强大，有更为细分的事件（in、out等），可以配合其他JS函数实现更多效果。</p>
+<p><strong>缺点：</strong>需要JS，在某些限制JS使用的网站无法使用（防止跨站脚本攻击）。</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-11-21T17:26:16+08:00"
-              content="2020-11-21">
-          11-21
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/21/CSS%E7%9A%84hover%E4%BC%AA%E7%B1%BB%E4%B8%8EJS%E7%9A%84onmouseover%E5%AF%B9%E6%AF%94/" itemprop="url">
-            <span itemprop="name">CSS的hover伪类与JS的onmouseover事件对比</span>
-          </a>
-      </div>
+    <footer class="post-footer">
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/11/10/Clash%E5%9C%A8windows%E4%B8%AD%E6%97%A0%E6%B3%95%E4%B8%BAchromium%E5%86%85%E6%A0%B8%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%90%E4%BE%9B%E4%BB%A3%E7%90%86%E7%9A%84%E9%97%AE%E9%A2%98/" rel="prev" title="Clash在windows中无法为chromium内核浏览器提供代理的问题">
+                  <i class="fa fa-chevron-left"></i> Clash在windows中无法为chromium内核浏览器提供代理的问题
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-11-10T20:58:30+08:00"
-              content="2020-11-10">
-          11-10
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/10/Clash%E5%9C%A8windows%E4%B8%AD%E6%97%A0%E6%B3%95%E4%B8%BAchromium%E5%86%85%E6%A0%B8%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%90%E4%BE%9B%E4%BB%A3%E7%90%86%E7%9A%84%E9%97%AE%E9%A2%98/" itemprop="url">
-            <span itemprop="name">Clash在windows中无法为chromium内核浏览器提供代理的问题</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-10-18T00:23:27+08:00"
-              content="2020-10-18">
-          10-18
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/18/%E5%BA%B7%E5%A4%8D%E6%97%A5%E5%BF%971/" itemprop="url">
-            <span itemprop="name">双相情感障碍康复日志1</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-10-11T10:43:30+08:00"
-              content="2020-10-11">
-          10-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/11/Git%E7%9A%84%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" itemprop="url">
-            <span itemprop="name">Git的文件操作</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-10-10T22:01:51+08:00"
-              content="2020-10-10">
-          10-10
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/10/%E5%AF%B9%E7%B1%B3%E6%B8%B8%E7%A4%BE%E8%A7%82%E6%B5%8B%E6%9E%A2%E7%9A%84%E7%8C%9C%E6%B5%8B/" itemprop="url">
-            <span itemprop="name">对米游社观测枢的猜测</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-10-10T20:30:50+08:00"
-              content="2020-10-10">
-          10-10
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/10/10/flag/" itemprop="url">
-            <span itemprop="name">Flag</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
+</div>
 
 
-    </div>
-  </div>
-  
-  
-  
 
-  
 
 
 
