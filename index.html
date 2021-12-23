@@ -196,7 +196,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/23/test/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/23/%E5%A6%82%E4%BD%95%E7%BB%99git%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -210,7 +210,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/12/23/test/" class="post-title-link" itemprop="url">test</a>
+            <a href="/2021/12/23/%E5%A6%82%E4%BD%95%E7%BB%99git%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/" class="post-title-link" itemprop="url">如何给git设置代理</a>
         </h2>
 
         <div class="post-meta-container">
@@ -220,8 +220,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-12-23 20:41:38" itemprop="dateCreated datePublished" datetime="2021-12-23T20:41:38+08:00">2021-12-23</time>
+      <time title="创建时间：2021-12-23 20:41:38 / 修改时间：21:00:59" itemprop="dateCreated datePublished" datetime="2021-12-23T20:41:38+08:00">2021-12-23</time>
     </span>
 
   
@@ -234,7 +235,17 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <h2 id="HTTP-S"><a href="#HTTP-S" class="headerlink" title="HTTP(S)"></a>HTTP(S)</h2><p>打开 <code>git bash</code>，然后输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy <span class="string">&quot;http://127.0.0.1:7890&quot;</span></span><br><span class="line">git config --global https.proxy <span class="string">&quot;https://127.0.0.1:7890&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>其中的端口请以自己的代理软件为准，下同</p>
+<p><a target="_blank" rel="noopener" href="https://jjayyyyyyy.github.io/2019/08/11/git_bash_proxy.html">此段参考</a></p>
+<h2 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h2><p>编辑 <code>%USERPROFILE%/.ssh</code>目录下创建<code>config</code>文件（无拓展名）</p>
+<p>内容为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">    User git</span><br><span class="line">    ProxyCommand nc -X connect -x 127.0.0.1:7890 %h %p</span><br></pre></td></tr></table></figure>
+
+<p>[此段参考](<a target="_blank" rel="noopener" href="https://ericclose.github.io/git-proxy-config.html">一文让你了解如何为 Git 设置代理 - Eric (ericclose.github.io)</a>)</p>
+
       
     </div>
 
@@ -260,7 +271,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/23/%E5%8E%9F%E7%A5%9E%E5%AF%BC%E5%85%A5midi%E8%87%AA%E5%8A%A8%E5%BC%B9%E7%90%B4/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/30/%E5%8E%9F%E7%A5%9E%E5%AF%BC%E5%85%A5midi%E8%87%AA%E5%8A%A8%E5%BC%B9%E7%90%B4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -274,7 +285,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/12/23/%E5%8E%9F%E7%A5%9E%E5%AF%BC%E5%85%A5midi%E8%87%AA%E5%8A%A8%E5%BC%B9%E7%90%B4/" class="post-title-link" itemprop="url">原神导入midi自动弹琴</a>
+            <a href="/2021/11/30/%E5%8E%9F%E7%A5%9E%E5%AF%BC%E5%85%A5midi%E8%87%AA%E5%8A%A8%E5%BC%B9%E7%90%B4/" class="post-title-link" itemprop="url">原神导入midi自动弹琴</a>
         </h2>
 
         <div class="post-meta-container">
@@ -285,8 +296,15 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-12-23 20:38:44" itemprop="dateCreated datePublished" datetime="2021-12-23T20:38:44+08:00">2021-12-23</time>
+      <time title="创建时间：2021-11-30 20:45:53" itemprop="dateCreated datePublished" datetime="2021-11-30T20:45:53+08:00">2021-11-30</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-12-23 20:55:02" itemprop="dateModified" datetime="2021-12-23T20:55:02+08:00">2021-12-23</time>
+      </span>
 
   
 </div>
@@ -298,7 +316,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <p>首先是辅助软件：<a target="_blank" rel="noopener" href="http://1.116.227.222:8092/">原神弹琴助手 - 风间</a>。附上<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1jP4y1L743/">作者的使用说明</a>。</p>
+<p><a target="_blank" rel="noopener" href="https://www.gangqinpu.com/cchtml/982264.htm">曲谱来源</a> <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1KQ4y1R71X">原视频</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.xiazai99.com/down/soft160397.html">PDF转midi：PDFtoMusic Pro 64-bit</a></p>
+<p>本文提到的文件均在百度网盘/备份/原神弹琴</p>
+
       
     </div>
 
@@ -482,10 +504,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2020-11-21 17:26:16 / 修改时间：18:21:43" itemprop="dateCreated datePublished" datetime="2020-11-21T17:26:16+08:00">2020-11-21</time>
+      <time title="创建时间：2020-11-21 17:26:16" itemprop="dateCreated datePublished" datetime="2020-11-21T17:26:16+08:00">2020-11-21</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-12-23 20:49:51" itemprop="dateModified" datetime="2021-12-23T20:49:51+08:00">2021-12-23</time>
+      </span>
 
   
 </div>
@@ -499,8 +527,8 @@
     <div class="post-body" itemprop="articleBody">
           <p>两者共同特点：可以在鼠标移入、移出时添加效果。</p>
 <p>但是在作用的方式和范围上有所区别。</p>
-<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><pre><code>.father:hover ~ .activate&#123;display:inline-block;&#125;
-.father:hover ~ .off&#123;display:none;&#125;</code></pre>
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span><span class="selector-pseudo">:hover</span> ~ <span class="selector-class">.activate</span>&#123;<span class="attribute">display</span>:inline-block;&#125;</span><br><span class="line"><span class="selector-class">.father</span><span class="selector-pseudo">:hover</span> ~ <span class="selector-class">.off</span>&#123;<span class="attribute">display</span>:none;&#125;</span><br></pre></td></tr></table></figure>
+
 <p>作用方式：改变CSS属性。</p>
 <p>作用范围：使用CSS选择器来决定对象。</p>
 <p><strong>优点：</strong></p>
@@ -509,14 +537,8 @@
 <p>CSS选择器在实现复杂的定位时有些困难，如控制另一父容器中的内容。</p>
 <p>仅能改变样式，不能改变内容（虽然可以通过改变不同内容的属性来实现切换，但是不能实现增删等复杂操作）。</p>
 <p>仅有笼统的hover不支持更为细分的事件。</p>
-<h2 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h2><pre><code>functionover(obj)&#123;
-obj.innerHTML = &quot;鼠标移入&quot;;
-obj.style.display = &quot;inline-block&quot;;
-&#125;
-functionout(obj)&#123;
-obj.innerHTML = &quot;移出了&quot;;
-obj.style.display = &quot;none&quot;;
-&#125;</code></pre>
+<h2 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">functionover</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">obj.innerHTML = <span class="string">&quot;鼠标移入&quot;</span>;</span><br><span class="line">obj.style.display = <span class="string">&quot;inline-block&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="title">functionout</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">obj.innerHTML = <span class="string">&quot;移出了&quot;</span>;</span><br><span class="line">obj.style.display = <span class="string">&quot;none&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>作用方式：JS的DOM方法。</p>
 <p>作用范围：无限制（JS）。</p>
 <p><strong>优点：</strong>强大，有更为细分的事件（in、out等），可以配合其他JS函数实现更多效果。</p>
