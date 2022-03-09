@@ -115,7 +115,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -145,6 +145,75 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/Win10%E4%B8%ADMicrosoft-Store%E9%94%99%E8%AF%AF0x80073D0A%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jiut">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jiut's Home">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/09/24/Win10%E4%B8%ADMicrosoft-Store%E9%94%99%E8%AF%AF0x80073D0A%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">Win10中Microsoft Store错误0x80073D0A的解决方法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-09-24 20:23:31 / 修改时间：20:37:24" itemprop="dateCreated datePublished" datetime="2021-09-24T20:23:31+08:00">2021-09-24</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>在更新Quicklook时频繁出现这个错误。确定是Windows defender的问题。</p>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p>Windows Defender Firewall服务的操作显示是灰色。后来确定是注册表的问题。</p>
+<p>解决方法：打开注册表，定位到HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MpsSvc，查看start的数值数据是否为2，双击修改为2即可——但是要重启后才能生效。</p>
+<p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u010188012/article/details/105455577">https://blog.csdn.net/u010188012/article/details/105455577</a></p>
+<p>在过程中不小心通过设置重置Microsoft Store的缓存时清除了Microsoft Store。通过<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/36090296/answer/162985011">这个知乎回答</a>找回。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
