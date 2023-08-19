@@ -115,7 +115,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -145,6 +145,84 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/09/git%E6%AF%94%E8%BE%83%E6%96%87%E4%BB%B6%E5%B7%AE%E5%BC%82/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jiut">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jiut's Home">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/09/git%E6%AF%94%E8%BE%83%E6%96%87%E4%BB%B6%E5%B7%AE%E5%BC%82/" class="post-title-link" itemprop="url">git比较文件差异</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-03-09 17:50:39 / 修改时间：17:53:51" itemprop="dateCreated datePublished" datetime="2022-03-09T17:50:39+08:00">2022-03-09</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="阐述"><a href="#阐述" class="headerlink" title="阐述"></a>阐述</h2><p>在实际工作中，文件差异的比较是经常会碰到的，今天就来总结一下git diff命令的使用。</p>
+<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>当我们上线一个分支时，往往会碰到要和master分支做比较的情况，需要确认分支所提交的修改是否属于都自己的，会不会把别人的修改一起提交上去，这个时候就要以master分支为参照，比较自己分支和master分支之间的差异。我们还可能会碰到，为了确认某次的线上Bug，需要对比历史提交的版本和当前版本之间的差异。</p>
+<h2 id="如何比较不同分支之间的文件差异"><a href="#如何比较不同分支之间的文件差异" class="headerlink" title="如何比较不同分支之间的文件差异"></a>如何比较不同分支之间的文件差异</h2><p>git diff master dev</p>
+<p>上面的命令是以master分支为参照，比较dev分支和master分支之间的差异。注意改变分支的比较顺序，结果会不同，默认不加文件名参数，会比较出所有文件的差异。 比较指定文件的差异可以参照如下命令:</p>
+<p>git diff master dev – READMD.md</p>
+<p>实际Git在设计上，用了一个指针来指向当前分支所在commit对象，master分支实际上为一个指针，在不分离头指针的情况下,它指向的是最新一次提交的commit对象，dev分支也是。 所以把命令git diff master dev替换成git diff fde17e9 4700e4a也是一样的效果，使用git log命令就能查看当前master分支和dev分支所指向的commit id。 commit id是经过SHA1加密算法计算出来的40位十六进制HASH值，Git是分布式的，它不像SVN等集中式控制版本，是用一个自增长ID来标志每次的提交。 一般我们取SHA1计算出来的前7位就能标识出来某次的提交，比较不同版本之间的差异，也用的commit id来指代版本。</p>
+<h2 id="如何比较工作区和版本库之间的文件差异"><a href="#如何比较工作区和版本库之间的文件差异" class="headerlink" title="如何比较工作区和版本库之间的文件差异"></a>如何比较工作区和版本库之间的文件差异</h2><p>Git中用一个叫HEAD的指针指向当前分支的最新一次提交，我们可以用以下命令来比较工作区和版本库之间的文件差异</p>
+<p>比较全部文件: git diff HEAD</p>
+<p>比较单个文件: git diff HEAD – READMD.md</p>
+<p><strong>比较单个文件或者某几个文件，需要加上–,以下就不再举例单个文件的差异比较了，大家记住这个规则就好。</strong></p>
+<h2 id="如何比较工作区和暂存区之间的文件差异"><a href="#如何比较工作区和暂存区之间的文件差异" class="headerlink" title="如何比较工作区和暂存区之间的文件差异"></a>如何比较工作区和暂存区之间的文件差异</h2><p>使用默认的git diff，不加任何参数，默认比较的是工作区和暂存区之间的文件差异。</p>
+<h2 id="如何比较暂存区和版本库之间的文件差异"><a href="#如何比较暂存区和版本库之间的文件差异" class="headerlink" title="如何比较暂存区和版本库之间的文件差异"></a>如何比较暂存区和版本库之间的文件差异</h2><p>使用git diff –cached或者git diff –staged来比较暂存区和版本库之间的文件差异，cached和staged都有表示缓存的意思。</p>
+<p>最后，用一张图来总结文章的内容，希望对大家有帮助。</p>
+<img src="/2022/03/09/git%E6%AF%94%E8%BE%83%E6%96%87%E4%BB%B6%E5%B7%AE%E5%BC%82/1.jpg" class="">
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -900,69 +978,6 @@
 <p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u010188012/article/details/105455577">https://blog.csdn.net/u010188012/article/details/105455577</a></p>
 <p>在过程中不小心通过设置重置Microsoft Store的缓存时清除了Microsoft Store。通过<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/36090296/answer/162985011">这个知乎回答</a>找回。</p>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/21/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E4%B8%AD%E7%9A%84%E2%80%9C%E5%B0%81%E8%A3%85%E2%80%9D%E6%A6%82%E5%BF%B5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jiut">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jiut's Home">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/11/21/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E4%B8%AD%E7%9A%84%E2%80%9C%E5%B0%81%E8%A3%85%E2%80%9D%E6%A6%82%E5%BF%B5/" class="post-title-link" itemprop="url">面向对象编程中的“封装”概念</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-11-21 18:58:05" itemprop="dateCreated datePublished" datetime="2020-11-21T18:58:05+08:00">2020-11-21</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
       
     </div>
 
